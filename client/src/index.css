@@ -1,5 +1,5 @@
 body {
-    margin: 50;
+    margin: 0;
     padding: 0;
     background-color: rgb(233, 241, 249);
     display: flex;
@@ -14,4 +14,24 @@ body {
     padding: 10px;
     width: 800px;
     margin-top: 50px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 10px;
+    border-radius: 12px;
+    background-color: transparent;
+}
+
+.list-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
 }
