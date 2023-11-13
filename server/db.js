@@ -8,8 +8,7 @@ const pool =
             user: process
                 .env
                 .USERNAME,
-            password:
-                process
+            password: process
                     .env
                     .PASSWORD,
             host: process
@@ -19,7 +18,7 @@ const pool =
                 .env
                 .DBPORT,
             database:
-                "todoapp",
+                "dasollee",
         }
     )
 

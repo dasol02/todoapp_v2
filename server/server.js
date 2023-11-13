@@ -4,21 +4,28 @@ const PORT =
         .PORT ??
     8001
 const express = require("express")
+const cors = require('cors')
 const app =
     express()
 const pool = require("./db")
 
+app.use(cors())
+
 // get all toods
 app.get(
-    "/todos",
+    "/todos/:userEmail",
     async (
         req,
         res
     ) => {
+        console.log(req)
+        const { userEmail } = req.params
+        console.log(userEmail)
+
         try {
             const todos =
                 await pool.query(
-                    "SELECT * FROM todos"
+                    'SELECT * FROM todos WHERE user_email = $1', [userEmail]
                 )
             res.json(
                 todos.rows
